@@ -92,3 +92,11 @@ dimensions:
 measures:
   count:
     aggregate_type: count
+
+  deposit_amount_average:
+    sql: ${deposits.deposit_amount}
+    aggregate_type: average
+
+  deposit_amount_sum:
+    sql: ${deposits.deposit_amount}
+    aggregate_type: sum

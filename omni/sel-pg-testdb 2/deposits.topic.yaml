@@ -1,0 +1,18 @@
+base_view: deposits
+label: Deposits sample
+
+joins:
+  banks:
+    adjustments: {}
+  checks: {}
+  agency_notice_items:
+    agency_notices: {}
+  adjustment_items: {}
+  tax_payees:
+    tax_pmt_due_date_options: {}
+  select_pmt_options: {}
+  payment_methods: {}
+  deposit_submissions:
+    workflows:
+      workflow_types: {}
+  data_stores: {}
