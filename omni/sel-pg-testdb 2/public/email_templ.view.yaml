@@ -1,0 +1,29 @@
+# Reference this view as email_templ
+schema: public
+
+dimensions:
+  email_templ_name: {}
+  email_templ_desc: {}
+  sender_email_list: {}
+  to_email_list: {}
+  cc_email_list: {}
+  bcc_email_list: {}
+  subject: {}
+  body: {}
+  delim: {}
+  is_system: {}
+  sortorder: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,26 @@
+# Reference this view as submodule_special_features
+schema: public
+
+dimensions:
+  feature_code: {}
+  feature_name: {}
+  feature_desc: {}
+  feature_access_set_code: {}
+  sortorder: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  submodule_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

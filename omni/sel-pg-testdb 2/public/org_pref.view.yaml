@@ -1,0 +1,21 @@
+# Reference this view as org_pref
+schema: public
+
+dimensions:
+  pref_key: {}
+  pref_value: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

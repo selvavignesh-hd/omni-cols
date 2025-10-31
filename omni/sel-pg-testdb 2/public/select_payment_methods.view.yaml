@@ -1,0 +1,34 @@
+# Reference this view as select_payment_methods
+schema: public
+
+dimensions:
+  filed_by: {}
+  access_code: {}
+  access_code2: {}
+  access_code3: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  payment_method_options_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

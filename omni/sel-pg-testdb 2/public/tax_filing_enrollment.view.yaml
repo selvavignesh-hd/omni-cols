@@ -1,0 +1,30 @@
+# Reference this view as tax_filing_enrollment
+schema: public
+
+dimensions:
+  status: {}
+  status_time: {}
+  enrollment_file_name: {}
+  ack_file_name: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  comment: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  workflow_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

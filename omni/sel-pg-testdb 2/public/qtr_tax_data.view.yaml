@@ -1,0 +1,133 @@
+# Reference this view as qtr_tax_data
+schema: public
+
+dimensions:
+  record_type: {}
+  period_type: {}
+  period_code: {}
+  period_end_date: {}
+  tax_code: {}
+  tax_status: {}
+  status: {}
+  filed_by: {}
+  agency_ein: {}
+  agency_ein_type: {}
+  work_psd: {}
+  home_psd: {}
+  tax: {}
+  taxable_wages: {}
+  gross_wages: {}
+  ytd_tax: {}
+  ytd_taxable_wages: {}
+  ytd_gross_wages: {}
+  original_taxable_wages: {}
+  calculated_tax: {}
+  qtd_dtd_calculated_tax_diff: {}
+  tax_rate: {}
+  tax_rate2: {}
+  override_wage_base: {}
+  workers_comp_classification_code: {}
+  hours_worked: {}
+  weeks_worked: {}
+  qtr_worked: {}
+  hire_date: {}
+  terminate_date: {}
+  is_salaried: {}
+  hourly_rate: {}
+  is_seasonal: {}
+  is_manually_edited: {}
+  is_historical: {}
+  work_location_name: {}
+  work_location_id_source: {}
+  work_location_street_name: {}
+  work_location_street_name2: {}
+  work_location_city: {}
+  work_location_state: {}
+  work_location_postal_code: {}
+  month1: {}
+  month2: {}
+  month3: {}
+  supplemental_data: {}
+  override_reason: {}
+  is_picked_in_filing: {}
+  feed_status: {}
+  select_tax_rate: {}
+  amend_chg_value: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  comments: {}
+  local_cd: {}
+  amend_mask_value: {}
+  amend_second_mask_value: {}
+  amend_third_mask_value: {}
+  amend_fourth_mask_value: {}
+  amend_fifth_mask_value: {}
+  wage_variance: {}
+  ytd_variance: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  transmission_id:
+    format: ID
+
+  qtd_tax_group_id:
+    format: ID
+
+  payroll_xfer_id:
+    format: ID
+
+  import_tax_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+  payroll_employee_id:
+    format: ID
+
+  tax_group_id:
+    format: ID
+
+  work_location_id:
+    format: ID
+
+  work_location_country_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  employee_master_id:
+    format: ID
+
+  select_tax_id:
+    format: ID
+
+  common_tax_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  select_form_option_id:
+    format: ID
+
+  bank_id:
+    format: ID
+
+  filing_group_id:
+    format: ID
+
+  payment_method_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

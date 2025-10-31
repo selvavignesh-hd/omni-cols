@@ -1,0 +1,110 @@
+# Reference this view as daily_tax_data
+schema: public
+
+dimensions:
+  bank_cd: {}
+  record_type: {}
+  local_cd: {}
+  qtr_code: {}
+  pay_date: {}
+  trans_type: {}
+  tax_code: {}
+  tax_status: {}
+  feed_status: {}
+  status: {}
+  payroll_tax_status: {}
+  amend_num: {}
+  agency_ein: {}
+  agency_ein_type: {}
+  deposit_frequency: {}
+  tax: {}
+  taxable_wages: {}
+  gross_wages: {}
+  tax_rate: {}
+  tax_rate2: {}
+  override_wage_base: {}
+  is_historical: {}
+  filed_by: {}
+  include_with_tax_form: {}
+  payment_due_date: {}
+  process_due_date: {}
+  payroll_start_date: {}
+  payroll_end_date: {}
+  override_reason: {}
+  is_picked_in_filing: {}
+  comments: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  responsibility_code: {}
+  custom_id_field_1: {}
+  custom_id_field_2: {}
+  custom_date_field_1: {}
+  custom_date_field_2: {}
+  custom_date_time_field_1: {}
+  custom_date_time_field_2: {}
+  custom_char_field_1: {}
+  custom_char_field_2: {}
+  supplemental_data: {}
+  pmt_access_code: {}
+  source_trans_type: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  payroll_xfer_id:
+    format: ID
+
+  transmission_id:
+    format: ID
+
+  import_tax_id:
+    format: ID
+
+  bank_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  tax_group_id:
+    format: ID
+
+  select_tax_id:
+    format: ID
+
+  common_tax_id:
+    format: ID
+
+  agency_notice_item_id:
+    format: ID
+
+  adjustment_item_id:
+    format: ID
+
+  work_location_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  payment_method_id:
+    format: ID
+
+  deposit_id:
+    format: ID
+
+  select_pmt_option_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

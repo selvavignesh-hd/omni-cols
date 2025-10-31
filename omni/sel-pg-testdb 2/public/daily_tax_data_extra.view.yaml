@@ -1,0 +1,23 @@
+# Reference this view as daily_tax_data_extra
+schema: public
+
+dimensions:
+  value: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  daily_tax_data_id:
+    format: ID
+
+  code_pairs_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

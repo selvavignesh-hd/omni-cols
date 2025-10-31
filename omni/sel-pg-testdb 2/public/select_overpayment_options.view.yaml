@@ -1,0 +1,30 @@
+# Reference this view as select_overpayment_options
+schema: public
+
+dimensions:
+  filed_by: {}
+  regular_overpayment_option: {}
+  amendment_overpayment_option: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

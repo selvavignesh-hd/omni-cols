@@ -1,0 +1,25 @@
+# Reference this view as company_work_locations
+schema: public
+
+dimensions:
+  last_wage_date: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  company_master_id:
+    format: ID
+
+  work_location_master_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

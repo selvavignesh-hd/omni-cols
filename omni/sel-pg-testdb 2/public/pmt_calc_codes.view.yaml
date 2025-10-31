@@ -1,0 +1,21 @@
+# Reference this view as pmt_calc_codes
+schema: public
+
+dimensions:
+  code: {}
+  short_code: {}
+  code_name: {}
+  code_description: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

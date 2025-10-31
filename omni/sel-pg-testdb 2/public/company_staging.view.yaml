@@ -1,0 +1,63 @@
+# Reference this view as company_staging
+schema: public
+
+dimensions:
+  is_new_company: {}
+  name: {}
+  legal_name: {}
+  entity_type: {}
+  tax_filing_status: {}
+  fein: {}
+  primary_contact_name: {}
+  primary_contact_email: {}
+  primary_phone: {}
+  primary_address: {}
+  primary_address2: {}
+  primary_city: {}
+  primary_state: {}
+  primary_postal_code: {}
+  primary_county_code: {}
+  country_code: {}
+  naics_code: {}
+  status: {}
+  plan_start_date: {}
+  plan_end_date: {}
+  is_seasonal: {}
+  is_501c3: {}
+  is_944: {}
+  last_modify_date_time: {}
+  feed_status: {}
+  override_reason: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  company_start_date: {}
+  company_end_date: {}
+  pay_cycle: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  payroll_xfer_id:
+    format: ID
+
+  transmission_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  company_master_status_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

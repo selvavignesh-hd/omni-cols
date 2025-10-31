@@ -1,0 +1,20 @@
+# Reference this view as submodule_actions
+schema: public
+
+dimensions:
+  submodule_action_name: {}
+  sortorder: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

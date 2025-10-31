@@ -1,0 +1,31 @@
+# Reference this view as bai2_settlements
+schema: public
+
+dimensions:
+  settlement_date: {}
+  bai2_record_type: {}
+  db_cr: {}
+  settlement_amount: {}
+  ref_data: {}
+  match_type: {}
+  match_data: {}
+  match_status: {}
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  bai2_xfer_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

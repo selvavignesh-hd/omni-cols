@@ -1,0 +1,24 @@
+# Reference this view as role_domain_access
+schema: public
+
+dimensions:
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  role_id:
+    format: ID
+
+  domain_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

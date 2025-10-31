@@ -1,0 +1,28 @@
+# Reference this view as roles
+schema: public
+
+dimensions:
+  role_name: {}
+  role_desc: {}
+  is_single_domain: {}
+  is_all_submodule_features: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  application_id:
+    format: ID
+
+  start_menu_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

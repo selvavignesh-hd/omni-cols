@@ -1,0 +1,31 @@
+# Reference this view as org_tax_form_override_features
+schema: public
+
+dimensions:
+  is_auto_form_rule_4_missing_remit: {}
+  is_auto_form_rule_4_missing_ein: {}
+  is_auto_form_rule_4_missing_tpa: {}
+  is_auto_form_rule_4_missing_enroll: {}
+  is_auto_form_rule_4_missing_access_code: {}
+  form_type: {}
+  default_filing_option: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

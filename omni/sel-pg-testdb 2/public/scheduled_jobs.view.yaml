@@ -1,0 +1,27 @@
+# Reference this view as scheduled_jobs
+schema: public
+
+dimensions:
+  timezone: {}
+  job_name: {}
+  job: {}
+  job_url: {}
+  interval: {}
+  status: {}
+  comments: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  payload: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

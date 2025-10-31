@@ -1,0 +1,26 @@
+# Reference this view as submodule_special_feature_access
+schema: public
+
+dimensions:
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  feature_id:
+    format: ID
+
+  role_id:
+    format: ID
+
+  feature_action_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

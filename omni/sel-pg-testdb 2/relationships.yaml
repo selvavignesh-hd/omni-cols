@@ -1,0 +1,979 @@
+- join_from_view: adjustment_items
+  join_to_view: adjustments
+  join_type: always_left
+  on_sql: ${adjustment_items.adjustment_id} = ${adjustments.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: adjustments
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${adjustments.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: adjustments
+  join_to_view: payment_methods
+  join_type: always_left
+  on_sql: ${adjustments.payment_method_id} = ${payment_methods.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: adjustments
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${adjustments.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: agency_notice_items
+  join_to_view: agency_notices
+  join_type: always_left
+  on_sql: ${agency_notice_items.agency_notice_id} = ${agency_notices.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: agency_notices
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${agency_notices.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: agency_notices
+  join_to_view: payment_methods
+  join_type: always_left
+  on_sql: ${agency_notices.payment_method_id} = ${payment_methods.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: audit_messages
+  join_to_view: audit_types
+  join_type: always_left
+  on_sql: ${audit_messages.audit_type_id} = ${audit_types.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: bai2_settlements
+  join_to_view: bai2_xfer
+  join_type: always_left
+  on_sql: ${bai2_settlements.bai2_xfer_id} = ${bai2_xfer.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: bank_usage
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${bank_usage.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: bulk_imports
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${bulk_imports.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: check_format_stubs
+  join_to_view: check_formats
+  join_type: always_left
+  on_sql: ${check_format_stubs.check_format_id} = ${check_formats.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: check_formats
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${check_formats.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: check_status_history
+  join_to_view: checks
+  join_type: always_left
+  on_sql: ${check_status_history.check_id} = ${checks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: checks
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${checks.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: checks
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${checks.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: checks
+  join_to_view: data_stores
+  join_type: always_left
+  on_sql: ${checks.data_store_id} = ${data_stores.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_cid_history
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${company_cid_history.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_group_tax_forms
+  join_to_view: company_groups
+  join_type: always_left
+  on_sql: ${company_group_tax_forms.company_group_id} = ${company_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_group_tax_forms
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${company_group_tax_forms.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_master
+  join_to_view: company_master_status
+  join_type: always_left
+  on_sql: ${company_master.company_master_status_id} = ${company_master_status.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_master_status
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${company_master_status.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_staging
+  join_to_view: payroll_xfer
+  join_type: always_left
+  on_sql: ${company_staging.payroll_xfer_id} = ${payroll_xfer.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_staging
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${company_staging.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_staging
+  join_to_view: company_master_status
+  join_type: always_left
+  on_sql: ${company_staging.company_master_status_id} = ${company_master_status.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_work_locations
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${company_work_locations.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: company_work_locations
+  join_to_view: work_location_master
+  join_type: always_left
+  on_sql: ${company_work_locations.work_location_master_id} =
+    ${work_location_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: ct_941_history
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${ct_941_history.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: custom_company_group_companies
+  join_to_view: custom_company_groups
+  join_type: always_left
+  on_sql: ${custom_company_group_companies.custom_company_group_id} =
+    ${custom_company_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: custom_company_group_companies
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${custom_company_group_companies.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: custom_payee_group_tax_payees
+  join_to_view: custom_payee_groups
+  join_type: always_left
+  on_sql: ${custom_payee_group_tax_payees.custom_payee_group_id} =
+    ${custom_payee_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: custom_payee_group_tax_payees
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${custom_payee_group_tax_payees.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: custom_tax_group_tax_codes
+  join_to_view: custom_tax_groups
+  join_type: always_left
+  on_sql: ${custom_tax_group_tax_codes.custom_tax_group_id} = ${custom_tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: payroll_xfer
+  join_type: always_left
+  on_sql: ${daily_tax_data.payroll_xfer_id} = ${payroll_xfer.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${daily_tax_data.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${daily_tax_data.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${daily_tax_data.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: agency_notice_items
+  join_type: always_left
+  on_sql: ${daily_tax_data.agency_notice_item_id} = ${agency_notice_items.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: adjustment_items
+  join_type: always_left
+  on_sql: ${daily_tax_data.adjustment_item_id} = ${adjustment_items.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${daily_tax_data.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: payment_methods
+  join_type: always_left
+  on_sql: ${daily_tax_data.payment_method_id} = ${payment_methods.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: deposits
+  join_type: always_left
+  on_sql: ${daily_tax_data.deposit_id} = ${deposits.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data
+  join_to_view: select_pmt_options
+  join_type: always_left
+  on_sql: ${daily_tax_data.select_pmt_option_id} = ${select_pmt_options.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data_extra
+  join_to_view: daily_tax_data
+  join_type: always_left
+  on_sql: ${daily_tax_data_extra.daily_tax_data_id} = ${daily_tax_data.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: daily_tax_data_extra
+  join_to_view: code_pairs
+  join_type: always_left
+  on_sql: ${daily_tax_data_extra.code_pairs_id} = ${code_pairs.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposit_status_history
+  join_to_view: deposits
+  join_type: always_left
+  on_sql: ${deposit_status_history.deposit_id} = ${deposits.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposit_status_history
+  join_to_view: checks
+  join_type: always_left
+  on_sql: ${deposit_status_history.check_id} = ${checks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposit_submissions
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${deposit_submissions.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${deposits.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: checks
+  join_type: always_left
+  on_sql: ${deposits.check_id} = ${checks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: agency_notice_items
+  join_type: always_left
+  on_sql: ${deposits.agency_notice_item_id} = ${agency_notice_items.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: adjustment_items
+  join_type: always_left
+  on_sql: ${deposits.adjustment_item_id} = ${adjustment_items.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${deposits.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: select_pmt_options
+  join_type: always_left
+  on_sql: ${deposits.select_pmt_option_id} = ${select_pmt_options.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: payment_methods
+  join_type: always_left
+  on_sql: ${deposits.payment_method_id} = ${payment_methods.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: deposit_submissions
+  join_type: always_left
+  on_sql: ${deposits.deposit_submission_id} = ${deposit_submissions.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: deposits
+  join_to_view: data_stores
+  join_type: always_left
+  on_sql: ${deposits.data_store_id} = ${data_stores.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: dtd_import_comparison
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${dtd_import_comparison.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: employee_master
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${employee_master.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: employee_staging
+  join_to_view: payroll_xfer
+  join_type: always_left
+  on_sql: ${employee_staging.payroll_xfer_id} = ${payroll_xfer.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: employee_staging
+  join_to_view: employee_master
+  join_type: always_left
+  on_sql: ${employee_staging.employee_master_id} = ${employee_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: employee_work_locations
+  join_to_view: employee_master
+  join_type: always_left
+  on_sql: ${employee_work_locations.employee_master_id} = ${employee_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: employee_work_locations
+  join_to_view: work_location_master
+  join_type: always_left
+  on_sql: ${employee_work_locations.work_location_master_id} =
+    ${work_location_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: exception_reports
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${exception_reports.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: fein_history
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${fein_history.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: filing_documents
+  join_to_view: data_stores
+  join_type: always_left
+  on_sql: ${filing_documents.data_store_id} = ${data_stores.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: filing_group_companies
+  join_to_view: filing_groups
+  join_type: always_left
+  on_sql: ${filing_group_companies.filing_group_id} = ${filing_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: filing_group_companies
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${filing_group_companies.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: filing_group_companies
+  join_to_view: company_groups
+  join_type: always_left
+  on_sql: ${filing_group_companies.company_group_id} = ${company_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: filing_groups
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${filing_groups.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: filing_groups
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${filing_groups.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: form_941_by_fein_history
+  join_to_view: form_941_by_fein
+  join_type: always_left
+  on_sql: ${form_941_by_fein_history.form_941_by_fein_id} = ${form_941_by_fein.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: form_941_liab_schedule_history
+  join_to_view: form_941_liab_schedule
+  join_type: always_left
+  on_sql: ${form_941_liab_schedule_history.form_941_liab_schedule_id} =
+    ${form_941_liab_schedule.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: form_due_dates
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${form_due_dates.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: form_fields_access
+  join_to_view: roles
+  join_type: always_left
+  on_sql: ${form_fields_access.role_id} = ${roles.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: form_fields_access
+  join_to_view: form_fields
+  join_type: always_left
+  on_sql: ${form_fields_access.form_field_id} = ${form_fields.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: generated_reports
+  join_to_view: data_stores
+  join_type: always_left
+  on_sql: ${generated_reports.data_store_id} = ${data_stores.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: integrity_checks
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${integrity_checks.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: liability_status_history
+  join_to_view: daily_tax_data
+  join_type: always_left
+  on_sql: ${liability_status_history.daily_tax_data_id} = ${daily_tax_data.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: master_qry_pref
+  join_to_view: submodules
+  join_type: always_left
+  on_sql: ${master_qry_pref.submodule_id} = ${submodules.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: master_qry_pref
+  join_to_view: users
+  join_type: always_left
+  on_sql: ${master_qry_pref.user_id} = ${users.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: master_sort_pref
+  join_to_view: submodules
+  join_type: always_left
+  on_sql: ${master_sort_pref.submodule_id} = ${submodules.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: menus
+  join_to_view: applications
+  join_type: always_left
+  on_sql: ${menus.application_id} = ${applications.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: modules
+  join_to_view: applications
+  join_type: always_left
+  on_sql: ${modules.application_id} = ${applications.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: my_search_view_pref
+  join_to_view: users
+  join_type: always_left
+  on_sql: ${my_search_view_pref.user_id} = ${users.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: nys_45_history
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${nys_45_history.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: org_system_config
+  join_to_view: data_stores
+  join_type: always_left
+  on_sql: ${org_system_config.data_store_id} = ${data_stores.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: org_tax_form_override_features
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${org_tax_form_override_features.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: org_tax_payee_override_features
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${org_tax_payee_override_features.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: org_tax_payee_override_features
+  join_to_view: tax_payment_method_options
+  join_type: always_left
+  on_sql: ${org_tax_payee_override_features.tax_payment_method_option_id} =
+    ${tax_payment_method_options.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: organizations
+  join_to_view: domains
+  join_type: always_left
+  on_sql: ${organizations.domain_id} = ${domains.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: override_bank_usage
+  join_to_view: override_banks
+  join_type: always_left
+  on_sql: ${override_bank_usage.override_bank_id} = ${override_banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: override_banks
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${override_banks.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: override_signers
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${override_signers.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: overriden_filed_by
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${overriden_filed_by.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: payroll_xfer
+  join_to_view: source_file_dir
+  join_type: always_left
+  on_sql: ${payroll_xfer.source_file_dir_id} = ${source_file_dir.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: payroll_xfer
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${payroll_xfer.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: payroll_xfer
+  join_to_view: data_stores
+  join_type: always_left
+  on_sql: ${payroll_xfer.data_store_id} = ${data_stores.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: payroll_xfer_tax_groups
+  join_to_view: payroll_xfer
+  join_type: always_left
+  on_sql: ${payroll_xfer_tax_groups.payroll_xfer_id} = ${payroll_xfer.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: payroll_xfer_tax_groups
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${payroll_xfer_tax_groups.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: peo_form_access_codes
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${peo_form_access_codes.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: peo_pmt_access_codes
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${peo_pmt_access_codes.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: positive_pay_entries
+  join_to_view: checks
+  join_type: always_left
+  on_sql: ${positive_pay_entries.check_id} = ${checks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtd_tax_groups
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${qtd_tax_groups.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtd_tax_groups_companies
+  join_to_view: qtd_tax_groups
+  join_type: always_left
+  on_sql: ${qtd_tax_groups_companies.qtd_tax_group_id} = ${qtd_tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtd_tax_groups_companies
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${qtd_tax_groups_companies.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_comp_misc_liabs
+  join_to_view: domains
+  join_type: always_left
+  on_sql: ${qtr_comp_misc_liabs.domain_id} = ${domains.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: qtd_tax_groups
+  join_type: always_left
+  on_sql: ${qtr_tax_data.qtd_tax_group_id} = ${qtd_tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: payroll_xfer
+  join_type: always_left
+  on_sql: ${qtr_tax_data.payroll_xfer_id} = ${payroll_xfer.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${qtr_tax_data.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${qtr_tax_data.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: employee_master
+  join_type: always_left
+  on_sql: ${qtr_tax_data.employee_master_id} = ${employee_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${qtr_tax_data.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: select_form_options
+  join_type: always_left
+  on_sql: ${qtr_tax_data.select_form_option_id} = ${select_form_options.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: banks
+  join_type: always_left
+  on_sql: ${qtr_tax_data.bank_id} = ${banks.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: filing_groups
+  join_type: always_left
+  on_sql: ${qtr_tax_data.filing_group_id} = ${filing_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data
+  join_to_view: payment_methods
+  join_type: always_left
+  on_sql: ${qtr_tax_data.payment_method_id} = ${payment_methods.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data_extra
+  join_to_view: qtr_tax_data
+  join_type: always_left
+  on_sql: ${qtr_tax_data_extra.qtr_tax_data_id} = ${qtr_tax_data.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtr_tax_data_extra
+  join_to_view: code_pairs
+  join_type: always_left
+  on_sql: ${qtr_tax_data_extra.code_pairs_id} = ${code_pairs.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: qtrly_summary_report
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${qtrly_summary_report.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: r_and_d_tax_credits_part1
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${r_and_d_tax_credits_part1.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: refund_requests
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${refund_requests.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: role_domain_access
+  join_to_view: roles
+  join_type: always_left
+  on_sql: ${role_domain_access.role_id} = ${roles.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: role_domain_access
+  join_to_view: domains
+  join_type: always_left
+  on_sql: ${role_domain_access.domain_id} = ${domains.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: roles
+  join_to_view: applications
+  join_type: always_left
+  on_sql: ${roles.application_id} = ${applications.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: scheduled_job_logs
+  join_to_view: scheduled_jobs
+  join_type: always_left
+  on_sql: ${scheduled_job_logs.scheduled_job_id} = ${scheduled_jobs.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: security_audit_messages
+  join_to_view: audit_types
+  join_type: always_left
+  on_sql: ${security_audit_messages.audit_type_id} = ${audit_types.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_company_groups
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${select_company_groups.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_company_groups
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${select_company_groups.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_company_groups
+  join_to_view: company_groups
+  join_type: always_left
+  on_sql: ${select_company_groups.company_group_id} = ${company_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_emp_wc_codes
+  join_to_view: employee_master
+  join_type: always_left
+  on_sql: ${select_emp_wc_codes.employee_master_id} = ${employee_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_form_options
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${select_form_options.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_gl_codes
+  join_to_view: company_master
+  join_type: always_left
+  on_sql: ${select_gl_codes.company_master_id} = ${company_master.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_overpayment_options
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${select_overpayment_options.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_payment_methods
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${select_payment_methods.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_pmt_options
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${select_pmt_options.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: select_pmt_options
+  join_to_view: tax_pmt_due_date_options
+  join_type: always_left
+  on_sql: ${select_pmt_options.tax_pmt_due_date_options_id} =
+    ${tax_pmt_due_date_options.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodule_access
+  join_to_view: submodules
+  join_type: always_left
+  on_sql: ${submodule_access.submodule_id} = ${submodules.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodule_access
+  join_to_view: roles
+  join_type: always_left
+  on_sql: ${submodule_access.role_id} = ${roles.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodule_access
+  join_to_view: submodule_actions
+  join_type: always_left
+  on_sql: ${submodule_access.submodule_action_id} = ${submodule_actions.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodule_extra
+  join_to_view: submodule_code_pairs
+  join_type: always_left
+  on_sql: ${submodule_extra.submodule_code_pairs_id} = ${submodule_code_pairs.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodule_special_feature_access
+  join_to_view: roles
+  join_type: always_left
+  on_sql: ${submodule_special_feature_access.role_id} = ${roles.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodule_special_features
+  join_to_view: submodules
+  join_type: always_left
+  on_sql: ${submodule_special_features.submodule_id} = ${submodules.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: submodules
+  join_to_view: modules
+  join_type: always_left
+  on_sql: ${submodules.module_id} = ${modules.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_codes
+  join_to_view: tax_groups
+  join_type: always_left
+  on_sql: ${tax_codes.tax_group_id} = ${tax_groups.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_codes
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${tax_codes.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_codes
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${tax_codes.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_filing_enrollment
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${tax_filing_enrollment.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_form_filing_options
+  join_to_view: tax_forms
+  join_type: always_left
+  on_sql: ${tax_form_filing_options.tax_form_id} = ${tax_forms.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_payment_method_options
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${tax_payment_method_options.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_payment_method_options
+  join_to_view: payment_methods
+  join_type: always_left
+  on_sql: ${tax_payment_method_options.payment_method_id} = ${payment_methods.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_pmt_due_date_options
+  join_to_view: tax_payees
+  join_type: always_left
+  on_sql: ${tax_pmt_due_date_options.tax_payee_id} = ${tax_payees.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: tax_pmt_due_date_override
+  join_to_view: tax_pmt_due_date_options
+  join_type: always_left
+  on_sql: ${tax_pmt_due_date_override.tax_pmt_due_date_option_id} =
+    ${tax_pmt_due_date_options.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: users
+  join_to_view: timezones
+  join_type: always_left
+  on_sql: ${users.timezone_id} = ${timezones.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: users
+  join_to_view: roles
+  join_type: always_left
+  on_sql: ${users.role_id} = ${roles.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: users_password_history
+  join_to_view: users
+  join_type: always_left
+  on_sql: ${users_password_history.user_id} = ${users.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: voided_deposit_liabilities
+  join_to_view: deposits
+  join_type: always_left
+  on_sql: ${voided_deposit_liabilities.deposit_id} = ${deposits.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: workflow_logs
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${workflow_logs.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: workflow_messages
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${workflow_messages.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: workflow_messages
+  join_to_view: workflow_message_codes
+  join_type: always_left
+  on_sql: ${workflow_messages.workflow_message_code_id} = ${workflow_message_codes.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: workflow_transactions
+  join_to_view: workflows
+  join_type: always_left
+  on_sql: ${workflow_transactions.workflow_id} = ${workflows.id}
+  relationship_type: assumed_many_to_one
+
+- join_from_view: workflows
+  join_to_view: workflow_types
+  join_type: always_left
+  on_sql: ${workflows.workflow_type_id} = ${workflow_types.id}
+  relationship_type: assumed_many_to_one

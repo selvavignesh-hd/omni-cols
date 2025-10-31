@@ -1,0 +1,32 @@
+# Reference this view as fein_941_schedule_b
+schema: public
+
+dimensions:
+  cid: {}
+  fein: {}
+  qtr_code: {}
+  pay_date: {}
+  ss_er_taxes: {}
+  medicare_er_taxes: {}
+  medicare_er_taxes_credit: {}
+  ss_ee_taxes: {}
+  medicare_ee_taxes: {}
+  tax_credit: {}
+  created_at: {}
+  updated_at: {}
+  created_by: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  ss_er_taxes_credit_:
+    sql: '"ss_er_taxes_credit "'
+
+measures:
+  count:
+    aggregate_type: count

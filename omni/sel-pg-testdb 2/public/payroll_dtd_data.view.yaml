@@ -1,0 +1,33 @@
+# Reference this view as payroll_dtd_data
+schema: public
+
+dimensions:
+  filed_by: {}
+  tax_code: {}
+  pay_date: {}
+  qtr_code: {}
+  is_historical: {}
+  tax: {}
+  taxable_wages: {}
+  gross_wages: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  dtd_comparison_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

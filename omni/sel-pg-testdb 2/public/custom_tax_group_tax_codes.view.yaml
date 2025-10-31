@@ -1,0 +1,22 @@
+# Reference this view as custom_tax_group_tax_codes
+schema: public
+
+dimensions:
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  custom_tax_group_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

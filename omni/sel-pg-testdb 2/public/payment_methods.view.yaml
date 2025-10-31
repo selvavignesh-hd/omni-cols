@@ -1,0 +1,21 @@
+# Reference this view as payment_methods
+schema: public
+
+dimensions:
+  method_code: {}
+  method_name: {}
+  num_of_bus_days: {}
+  extra_days_for_non_working_day: {}
+  holiday_calendar_code: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

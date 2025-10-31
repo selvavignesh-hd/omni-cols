@@ -1,0 +1,57 @@
+# Reference this view as wage_detail_report
+schema: public
+
+dimensions:
+  period_end_date: {}
+  org_code: {}
+  client_name: {}
+  tax_code_state: {}
+  tax_code: {}
+  tax_code_description: {}
+  tax_code_short_description: {}
+  return_taxable_wages: {}
+  company_gross_wages: {}
+  company_taxable_wages: {}
+  psd_code: {}
+  adjustment_period: {}
+  emp_ssn: {}
+  emp_nbr: {}
+  suffix: {}
+  first_name: {}
+  middle_name: {}
+  last_name: {}
+  hire_date: {}
+  terminate_date: {}
+  employee_gross_wages: {}
+  employee_taxable_wages: {}
+  supplimental_data: {}
+  weeks_worked: {}
+  hourly_or_salaried: {}
+  hourly_rate: {}
+  hours_worked: {}
+  occupational_code: {}
+  class_code: {}
+  seasonal_employee: {}
+  officer: {}
+  officer_family_member: {}
+  month_1: {}
+  month_2: {}
+  month_3: {}
+  return_gross_wages: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+  client_company_id:
+    format: ID
+
+  worksite_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

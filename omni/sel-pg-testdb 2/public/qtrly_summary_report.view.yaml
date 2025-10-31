@@ -1,0 +1,41 @@
+# Reference this view as qtrly_summary_report
+schema: public
+
+dimensions:
+  period_end_date: {}
+  qtr_code: {}
+  reporting_payroll_name: {}
+  client_name: {}
+  tax_code: {}
+  tax_code_description: {}
+  tax_code_short_description: {}
+  daily_gross_wage_sum: {}
+  daily_taxable_wage_sum: {}
+  daily_tax_sum: {}
+  tax_rate: {}
+  quarter_gross_wages: {}
+  quarter_taxable_wages: {}
+  quarter_tax_due: {}
+  variance: {}
+  deposited_amount: {}
+  pending_deposit: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+  reporting_payroll_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  client_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

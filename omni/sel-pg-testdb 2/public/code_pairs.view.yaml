@@ -1,0 +1,23 @@
+# Reference this view as code_pairs
+schema: public
+
+dimensions:
+  code: {}
+  code_catg: {}
+  data_type: {}
+  code_values: {}
+  display_name: {}
+  report_name: {}
+  comment: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

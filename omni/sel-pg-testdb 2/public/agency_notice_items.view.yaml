@@ -1,0 +1,31 @@
+# Reference this view as agency_notice_items
+schema: public
+
+dimensions:
+  tax: {}
+  period_end_date: {}
+  credit_type: {}
+  interest: {}
+  penalty: {}
+  include_in_tax_form: {}
+  is_paid: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  responsibility_code: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  agency_notice_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

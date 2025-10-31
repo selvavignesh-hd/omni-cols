@@ -1,0 +1,47 @@
+# Reference this view as security_config
+schema: public
+
+dimensions:
+  activation_key_length: {}
+  is_security_qa_active: {}
+  max_wrong_password_limit: {}
+  min_pass_length: {}
+  num_alpha_char_required: {}
+  num_upper_case_char_required: {}
+  num_lower_case_char_required: {}
+  num_digits_required: {}
+  num_special_char_required: {}
+  special_char_not_allowed: {}
+  special_char_allowed: {}
+  num_last_password_not_allowed: {}
+  dynamic_ui_regex: {}
+  email_activation_link_exp_time: {}
+  other_email_link_exp_time: {}
+  temp_password_valid_duration: {}
+  change_of_email_time: {}
+  phone_activation_email_time: {}
+  phone_activation_phone_time: {}
+  is_password_expiration: {}
+  password_warning_issue_days: {}
+  force_password_change_days: {}
+  is_ssn_validation_enabled: {}
+  multi_factor_auth_enable: {}
+  multi_factor_auth_type: {}
+  multi_factor_auth_otp_length: {}
+  multi_factor_auth_otp_expire_duration: {}
+  session_timeout_prompt_time: {}
+  session_timeout_time: {}
+  auto_login_timeout_mins: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  is_non_okta_login_allowed: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

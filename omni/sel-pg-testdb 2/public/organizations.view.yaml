@@ -1,0 +1,55 @@
+# Reference this view as organizations
+schema: public
+
+dimensions:
+  code: {}
+  name: {}
+  legal_name: {}
+  provider_type: {}
+  entity_type: {}
+  tax_filing_status: {}
+  fein: {}
+  ptin: {}
+  primary_address: {}
+  primary_address2: {}
+  primary_city: {}
+  primary_state: {}
+  primary_postal_code: {}
+  primary_contact_name: {}
+  primary_title: {}
+  primary_phone: {}
+  primary_contact_email: {}
+  naics_code: {}
+  is_seasonal: {}
+  status: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  company_logo_filename: {}
+  check_sign_filename: {}
+  form_sign_filename: {}
+  physical_address: {}
+  physical_address2: {}
+  physical_city: {}
+  physical_state: {}
+  physical_postal_code: {}
+  sort_order: {}
+  metadata: {}
+  primary_first_name: {}
+  primary_middle_name: {}
+  primary_last_name: {}
+  primary_fax: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  domain_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

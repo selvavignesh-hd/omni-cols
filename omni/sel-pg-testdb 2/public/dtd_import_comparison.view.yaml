@@ -1,0 +1,27 @@
+# Reference this view as dtd_import_comparison
+schema: public
+
+dimensions:
+  input_file_name: {}
+  output_file_name: {}
+  status: {}
+  import_start_date: {}
+  import_end_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  workflow_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

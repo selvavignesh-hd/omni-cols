@@ -1,0 +1,21 @@
+# Reference this view as organization_status
+schema: public
+
+dimensions:
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  updated_at: {}
+  created_by: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

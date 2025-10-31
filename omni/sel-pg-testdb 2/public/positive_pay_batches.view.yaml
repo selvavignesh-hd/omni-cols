@@ -1,0 +1,20 @@
+# Reference this view as positive_pay_batches
+schema: public
+
+dimensions:
+  batch_file_name: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

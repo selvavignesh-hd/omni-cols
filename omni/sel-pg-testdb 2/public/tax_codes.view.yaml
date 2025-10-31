@@ -1,0 +1,80 @@
+# Reference this view as tax_codes
+schema: public
+
+dimensions:
+  tax_code: {}
+  tax_name: {}
+  tax_short_name: {}
+  tax_desc: {}
+  tax_type: {}
+  is_form_calculated: {}
+  state: {}
+  rate_class: {}
+  rate_change_frequency: {}
+  rate_start_month: {}
+  filed_by: {}
+  is_variable_rate: {}
+  amend_mask: {}
+  second_amend_mask: {}
+  third_amend_mask: {}
+  fourth_amend_mask: {}
+  fifth_amend_mask: {}
+  is_dtd_for_employee: {}
+  is_qtd_for_employee: {}
+  is_combine_qtd_due_into_open_deposit: {}
+  subtotal_seqnum: {}
+  special_comments: {}
+  is_active: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_group_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+  amend_tax_form_id:
+    format: ID
+
+  second_tax_form_id:
+    format: ID
+
+  second_amend_tax_form_id:
+    format: ID
+
+  third_tax_form_id:
+    format: ID
+
+  third_amend_tax_form_id:
+    format: ID
+
+  fourth_tax_form_id:
+    format: ID
+
+  fourth_amend_tax_form_id:
+    format: ID
+
+  fifth_tax_form_id:
+    format: ID
+
+  fifth_amend_tax_form_id:
+    format: ID
+
+  major_tax_code_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

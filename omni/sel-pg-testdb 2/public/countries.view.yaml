@@ -1,0 +1,16 @@
+# Reference this view as countries
+schema: public
+
+dimensions:
+  iso_alpha2: {}
+  name: {}
+  created_at: {}
+  updated_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

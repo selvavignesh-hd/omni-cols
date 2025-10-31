@@ -1,0 +1,49 @@
+# Reference this view as override_banks
+schema: public
+
+dimensions:
+  bank_name: {}
+  bank_display_name: {}
+  address: {}
+  address2: {}
+  city: {}
+  state: {}
+  postal_code: {}
+  rounting_number: {}
+  account_number: {}
+  fractional_routing_number: {}
+  account_type: {}
+  immediate_destination: {}
+  immediate_origin: {}
+  immediate_destination_name: {}
+  immediate_origin_name: {}
+  ach_ref_code: {}
+  ach_file_seq_num: {}
+  ach_file_seq_date: {}
+  ach_company_discretionary_for_batch: {}
+  ach_company_id_for_batch: {}
+  last_check_num: {}
+  is_full_block_ach: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  payapi_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

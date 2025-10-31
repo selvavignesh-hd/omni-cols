@@ -1,0 +1,41 @@
+# Reference this view as rate_exchange
+schema: public
+
+dimensions:
+  period_type: {}
+  year: {}
+  semi_annual_period: {}
+  status: {}
+  upload_file_gen_time: {}
+  num_of_records: {}
+  status_time: {}
+  ein_file_name: {}
+  rate_file_name: {}
+  rate_file_time: {}
+  rate_process_file_name: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  error_file_name: {}
+  qtr: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  create_ein_workflow_id:
+    format: ID
+
+  upload_rate_workflow_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,25 @@
+# Reference this view as override_bank_usage
+schema: public
+
+dimensions:
+  is_regular: {}
+  is_amendment: {}
+  is_notices: {}
+  is_default: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  updated_at: {}
+  created_by: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  override_bank_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

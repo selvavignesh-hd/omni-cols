@@ -1,0 +1,21 @@
+# Reference this view as system_error_logs
+schema: public
+
+dimensions:
+  error: {}
+  query: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

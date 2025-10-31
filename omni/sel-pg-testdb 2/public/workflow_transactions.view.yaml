@@ -1,0 +1,22 @@
+# Reference this view as workflow_transactions
+schema: public
+
+dimensions:
+  ref_cd: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  workflow_id:
+    format: ID
+
+  ref_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

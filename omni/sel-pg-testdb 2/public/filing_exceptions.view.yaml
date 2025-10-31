@@ -1,0 +1,21 @@
+# Reference this view as filing_exceptions
+schema: public
+
+dimensions:
+  filed_by: {}
+  exception: {}
+  created_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  filing_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

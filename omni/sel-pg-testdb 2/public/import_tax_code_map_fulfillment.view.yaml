@@ -1,0 +1,26 @@
+# Reference this view as import_tax_code_map_fulfillment
+schema: public
+
+dimensions:
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  previous_import_tax_id:
+    format: ID
+
+  new_import_tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

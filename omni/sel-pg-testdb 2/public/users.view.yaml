@@ -1,0 +1,70 @@
+# Reference this view as users
+schema: public
+
+dimensions:
+  user_name: {}
+  user_desc: {}
+  first_name: {}
+  middle_name: {}
+  last_name: {}
+  friendly_name: {}
+  email_address: {}
+  office_phone: {}
+  country_code: {}
+  mobile_phone: {}
+  location: {}
+  password: {}
+  email_login_to_user: {}
+  is_approved: {}
+  is_locked_out: {}
+  last_login_time: {}
+  last_logoff_time: {}
+  last_password_changed_time: {}
+  last_lockout_time: {}
+  last_check_printing_login: {}
+  welcome_email_time: {}
+  failed_password_attempt_count: {}
+  failed_password_attempt_start_time: {}
+  failed_password_answer_attempt_count: {}
+  failed_password_answer_attempt_start_time: {}
+  email_activation_code: {}
+  phone_activation_code: {}
+  security_question_answer: {}
+  is_email_verified: {}
+  is_mobile_verified: {}
+  is_temp_password: {}
+  mobile_carrier: {}
+  last_selected_printer: {}
+  temp_password_time: {}
+  email_validate_link_time: {}
+  comment: {}
+  multi_factor_otp: {}
+  multi_factor_otp_time: {}
+  mac_address: {}
+  encryption_key: {}
+  printer_offset: {}
+  site_url: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  is_system_user: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  salutation_id:
+    format: ID
+
+  timezone_id:
+    format: ID
+
+  role_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,25 @@
+# Reference this view as voided_deposit_liabilities
+schema: public
+
+dimensions:
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  deposit_id:
+    format: ID
+
+  dtd_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

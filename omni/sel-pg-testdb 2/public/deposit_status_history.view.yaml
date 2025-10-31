@@ -1,0 +1,27 @@
+# Reference this view as deposit_status_history
+schema: public
+
+dimensions:
+  prev_status: {}
+  current_status: {}
+  reason: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  prev_amount: {}
+  current_amount: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  deposit_id:
+    format: ID
+
+  check_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,25 @@
+# Reference this view as tax_pmt_due_date_override
+schema: public
+
+dimensions:
+  calendar_code: {}
+  tax_year: {}
+  period_start_date: {}
+  period_end_date: {}
+  pmt_due_date: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_pmt_due_date_option_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

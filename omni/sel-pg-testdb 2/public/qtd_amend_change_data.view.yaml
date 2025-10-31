@@ -1,0 +1,32 @@
+# Reference this view as qtd_amend_change_data
+schema: public
+
+dimensions:
+  prev_value: {}
+  value: {}
+  revision_num: {}
+  qtr_code: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  prev_qtd_id:
+    format: ID
+
+  qtd_id:
+    format: ID
+
+  audit_type_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

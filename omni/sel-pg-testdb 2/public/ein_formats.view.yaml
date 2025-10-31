@@ -1,0 +1,24 @@
+# Reference this view as ein_formats
+schema: public
+
+dimensions:
+  format: {}
+  regexp: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  is_active: {}
+  is_deleted: {}
+  data_store_name: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

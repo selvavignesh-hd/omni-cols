@@ -1,0 +1,56 @@
+# Reference this view as deposit_report
+schema: public
+
+dimensions:
+  reporting_company_name: {}
+  payment_tax_code: {}
+  ein: {}
+  tax_period_end_date: {}
+  tax_due_date: {}
+  deposit_create_date: {}
+  filing_frequency: {}
+  late_indicator: {}
+  deposit_status: {}
+  tax_code_short_desc: {}
+  tax_deposit_total: {}
+  taxable_wage_total: {}
+  payment_method: {}
+  eft_type: {}
+  deposit_date: {}
+  class_code: {}
+  check_date: {}
+  liability_tax_desc: {}
+  taxable_wages: {}
+  tax_code: {}
+  tax: {}
+  liability_type: {}
+  liability_create_date: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+  reporting_company_id:
+    format: ID
+
+  process_id:
+    format: ID
+
+  deposit_confirmation_id:
+    format: ID
+
+  deposit_id:
+    format: ID
+
+  company_id:
+    format: ID
+
+  liability_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

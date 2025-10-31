@@ -1,0 +1,43 @@
+# Reference this view as r_and_d_tax_credit_part2
+schema: public
+
+dimensions:
+  qtr_code: {}
+  amend_num: {}
+  filed_by: {}
+  fein: {}
+  source: {}
+  line7_remaining_credit: {}
+  line8_ss_tax: {}
+  line9_ss_tips_tax: {}
+  line10_total_ss_tax: {}
+  line11_er_ss_tax: {}
+  is_3p_sick_payer: {}
+  is_3121_section_notice: {}
+  line12_ss_tax_credit: {}
+  line13_remaining_credit_for_medicare: {}
+  line14_medicare_tax_incl_tips: {}
+  line15_er_medicare_tax: {}
+  line16_medicare_tax_credit: {}
+  line17_total_tax_credit: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  external_filing_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+  filing_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

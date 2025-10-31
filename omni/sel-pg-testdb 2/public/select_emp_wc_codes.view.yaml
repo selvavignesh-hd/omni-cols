@@ -1,0 +1,32 @@
+# Reference this view as select_emp_wc_codes
+schema: public
+
+dimensions:
+  filed_by: {}
+  wc_code: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  employee_master_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

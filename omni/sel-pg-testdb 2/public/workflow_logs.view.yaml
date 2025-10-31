@@ -1,0 +1,18 @@
+# Reference this view as workflow_logs
+schema: public
+
+dimensions:
+  comment: {}
+  created_at: {}
+  created_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  workflow_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

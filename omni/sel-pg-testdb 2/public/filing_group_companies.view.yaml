@@ -1,0 +1,37 @@
+# Reference this view as filing_group_companies
+schema: public
+
+dimensions:
+  filed_option_code: {}
+  status: {}
+  payment_status: {}
+  submit_date: {}
+  status_desc: {}
+  is_amendment_req: {}
+  amend_mask: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  error_msg: {}
+  deposit_ref_num: {}
+  confirmation_num: {}
+  workflow_status: {}
+  is_freezed: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  filing_group_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  company_group_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

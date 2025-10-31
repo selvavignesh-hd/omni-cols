@@ -1,0 +1,30 @@
+# Reference this view as tax_pmt_due_date_options
+schema: public
+
+dimensions:
+  pmt_option_name: {}
+  pmt_option: {}
+  import_short_name: {}
+  pmt_option_description: {}
+  start_amount: {}
+  end_amount: {}
+  is_zero_payment: {}
+  spl_feature: {}
+  is_configurable: {}
+  is_default: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_payee_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

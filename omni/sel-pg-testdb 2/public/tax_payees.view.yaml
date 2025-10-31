@@ -1,0 +1,58 @@
+# Reference this view as tax_payees
+schema: public
+
+dimensions:
+  tax_state: {}
+  tax_payee_code: {}
+  tax_payee_name: {}
+  tax_short_name: {}
+  payee: {}
+  mail_to: {}
+  addr_line1: {}
+  addr_line2: {}
+  city: {}
+  state: {}
+  postal_code: {}
+  contact_name: {}
+  contact_phone: {}
+  eft_credit_acct_name: {}
+  eft_credit_acct_num: {}
+  eft_credit_routing_num: {}
+  eft_credit_pin: {}
+  eft_debit_phone: {}
+  eft_debit_url: {}
+  special_comments: {}
+  is_access_code1: {}
+  access_code1_desc: {}
+  is_access_code2: {}
+  access_code2_desc: {}
+  is_access_code3: {}
+  access_code3_desc: {}
+  is_auto_check_debit_missing_ein: {}
+  is_auto_check_debit_missing_access_code: {}
+  is_auto_check_debit_missing_payee_ach_info: {}
+  is_auto_check_debit_pdf_filing_method: {}
+  is_auto_check_debit_not_enrolled: {}
+  is_debit_not_allowed: {}
+  fraction_of_cents_threshold: {}
+  eff_date: {}
+  expiry_date: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  eft_credit_id:
+    format: ID
+
+  payapi_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

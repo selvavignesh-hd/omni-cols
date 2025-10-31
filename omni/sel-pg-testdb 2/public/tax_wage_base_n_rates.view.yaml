@@ -1,0 +1,27 @@
+# Reference this view as tax_wage_base_n_rates
+schema: public
+
+dimensions:
+  wage_limit: {}
+  max_tax_rate: {}
+  min_tax_rate: {}
+  default_tax_rate: {}
+  is_active: {}
+  is_override: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

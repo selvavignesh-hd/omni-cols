@@ -1,0 +1,23 @@
+# Reference this view as doc_uploads
+schema: public
+
+dimensions:
+  ref_code: {}
+  doc_type: {}
+  filename: {}
+  comments: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

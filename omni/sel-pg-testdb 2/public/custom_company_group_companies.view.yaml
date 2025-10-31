@@ -1,0 +1,22 @@
+# Reference this view as custom_company_group_companies
+schema: public
+
+dimensions:
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  custom_company_group_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

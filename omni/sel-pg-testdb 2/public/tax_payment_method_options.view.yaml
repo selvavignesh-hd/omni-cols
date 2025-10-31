@@ -1,0 +1,25 @@
+# Reference this view as tax_payment_method_options
+schema: public
+
+dimensions:
+  payment_method_option_name: {}
+  is_default: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_payee_id:
+    format: ID
+
+  payment_method_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

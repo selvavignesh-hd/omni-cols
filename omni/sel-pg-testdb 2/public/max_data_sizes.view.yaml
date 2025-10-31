@@ -1,0 +1,20 @@
+# Reference this view as max_data_sizes
+schema: public
+
+dimensions:
+  page_code: {}
+  page_name: {}
+  size: {}
+  page_size: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,26 @@
+# Reference this view as submodule_access
+schema: public
+
+dimensions:
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  submodule_id:
+    format: ID
+
+  role_id:
+    format: ID
+
+  submodule_action_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,23 @@
+# Reference this view as form_fields_access
+schema: public
+
+dimensions:
+  is_disabled: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  role_id:
+    format: ID
+
+  form_field_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

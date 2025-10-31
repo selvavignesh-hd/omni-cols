@@ -1,0 +1,22 @@
+# Reference this view as tax_groups
+schema: public
+
+dimensions:
+  tax_group_code: {}
+  tax_group_name: {}
+  tax_group_desc: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  filing_frequency: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

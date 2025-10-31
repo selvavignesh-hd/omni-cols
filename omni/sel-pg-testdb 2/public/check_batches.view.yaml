@@ -1,0 +1,26 @@
+# Reference this view as check_batches
+schema: public
+
+dimensions:
+  start_check_num: {}
+  last_check_num: {}
+  batch_file_name: {}
+  batch_status: {}
+  check_date: {}
+  is_picked: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  encryption_key: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

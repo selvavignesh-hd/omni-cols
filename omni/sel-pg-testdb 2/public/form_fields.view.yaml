@@ -1,0 +1,21 @@
+# Reference this view as form_fields
+schema: public
+
+dimensions:
+  module_code: {}
+  field_name: {}
+  display_name: {}
+  is_prompt_required: {}
+  is_required: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

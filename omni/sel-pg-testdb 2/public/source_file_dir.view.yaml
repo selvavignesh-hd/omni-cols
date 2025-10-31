@@ -1,0 +1,31 @@
+# Reference this view as source_file_dir
+schema: public
+
+dimensions:
+  file_type: {}
+  in_dir: {}
+  out_dir: {}
+  out_success_dir: {}
+  out_exist_dir: {}
+  process_mode: {}
+  out_fail_dir: {}
+  created_at: {}
+  updated_at: {}
+  relationship_code: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  out_data_store_id:
+    format: ID
+
+  in_data_store_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

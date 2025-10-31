@@ -1,0 +1,22 @@
+# Reference this view as company_group_tax_forms
+schema: public
+
+dimensions:
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  company_group_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

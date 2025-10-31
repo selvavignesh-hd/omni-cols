@@ -1,0 +1,22 @@
+# Reference this view as liability_status_history
+schema: public
+
+dimensions:
+  prev_status: {}
+  current_status: {}
+  held_reason: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  daily_tax_data_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

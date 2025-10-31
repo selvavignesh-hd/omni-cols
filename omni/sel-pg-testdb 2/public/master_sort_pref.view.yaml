@@ -1,0 +1,22 @@
+# Reference this view as master_sort_pref
+schema: public
+
+dimensions:
+  sort_pref_desc: {}
+  sort_pref_value: {}
+  is_default: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  submodule_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

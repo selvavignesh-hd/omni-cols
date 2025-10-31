@@ -1,0 +1,21 @@
+# Reference this view as applications
+schema: public
+
+dimensions:
+  application_code: {}
+  application_name: {}
+  application_desc: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updtaed_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,29 @@
+# Reference this view as workflows
+schema: public
+
+dimensions:
+  progress: {}
+  comments: {}
+  status: {}
+  start_time: {}
+  created_by: {}
+  end_time: {}
+  payload: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  workflow_type_id:
+    format: ID
+
+  parent_workflow_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,32 @@
+# Reference this view as deposit_submissions
+schema: public
+
+dimensions:
+  file_name: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  payapi_status: {}
+  summary_report_file_name: {}
+  detail_report_file_name: {}
+  submission_type: {}
+  total_deposit_amount: {}
+  payment_voucher_file_name: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  workflow_id:
+    format: ID
+
+  payapi_id:
+    format: ID
+
+  positive_pay_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

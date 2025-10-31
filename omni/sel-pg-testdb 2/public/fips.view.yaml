@@ -1,0 +1,15 @@
+# Reference this view as fips
+schema: public
+
+dimensions:
+  fips_code: {}
+  state_abbr: {}
+  fips_name: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,41 @@
+# Reference this view as liability_report
+schema: public
+
+dimensions:
+  tax_code: {}
+  tax_code_desc: {}
+  report_tax_code_sum: {}
+  reporting_payroll_name: {}
+  company_name: {}
+  check_date: {}
+  pmt_tax_code: {}
+  pmt_tax_code_desc: {}
+  ein: {}
+  due_date: {}
+  pmt_freq: {}
+  transaction_type: {}
+  liability_status: {}
+  pmt_method: {}
+  deposit_date: {}
+  deposit_create_date: {}
+  tax: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+  reporting_comp_id:
+    format: ID
+
+  company_id:
+    format: ID
+
+  pmt_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,34 @@
+# Reference this view as qtr_comp_misc_liabs
+schema: public
+
+dimensions:
+  version: {}
+  qtr_code: {}
+  tax_code: {}
+  amend_num: {}
+  liab_type: {}
+  open_status: {}
+  tax: {}
+  int_plus_penalty: {}
+  created_at: {}
+  updated_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  domain_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+  company_id:
+    format: ID
+
+  filing_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

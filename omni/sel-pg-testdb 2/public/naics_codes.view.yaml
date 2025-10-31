@@ -1,0 +1,19 @@
+# Reference this view as naics_codes
+schema: public
+
+dimensions:
+  year: {}
+  naics_code: {}
+  naics_desc: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

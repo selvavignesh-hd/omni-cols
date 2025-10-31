@@ -1,0 +1,24 @@
+# Reference this view as select_import_error_correction_history
+schema: public
+
+dimensions:
+  ref_cd: {}
+  prev_value: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

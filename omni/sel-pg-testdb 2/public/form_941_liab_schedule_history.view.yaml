@@ -1,0 +1,27 @@
+# Reference this view as form_941_liab_schedule_history
+schema: public
+
+dimensions:
+  fein: {}
+  pay_date: {}
+  withholding_taxes: {}
+  ss_taxes: {}
+  ss_taxes_credit: {}
+  medicare_taxes: {}
+  medicare_taxes_credit: {}
+  total_taxes: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  form_941_liab_schedule_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

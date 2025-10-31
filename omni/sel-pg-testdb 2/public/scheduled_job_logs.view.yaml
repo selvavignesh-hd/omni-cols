@@ -1,0 +1,21 @@
+# Reference this view as scheduled_job_logs
+schema: public
+
+dimensions:
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  payload: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  scheduled_job_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

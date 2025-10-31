@@ -1,0 +1,36 @@
+# Reference this view as refund_requests
+schema: public
+
+dimensions:
+  filed_by: {}
+  ref_cd: {}
+  qtr_code: {}
+  refund_amount: {}
+  period_end_date: {}
+  relationship_code: {}
+  status: {}
+  comment: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  ref_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,26 @@
+# Reference this view as workflow_types
+schema: public
+
+dimensions:
+  type: {}
+  name: {}
+  is_parent: {}
+  is_progress_bar: {}
+  expire_progress_bar_in_min: {}
+  num_of_intervals: {}
+  pre_proc_pct: {}
+  post_proc_pct: {}
+  child_proc_pct: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

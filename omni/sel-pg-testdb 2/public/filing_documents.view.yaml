@@ -1,0 +1,33 @@
+# Reference this view as filing_documents
+schema: public
+
+dimensions:
+  filed_by: {}
+  file_name: {}
+  type: {}
+  status: {}
+  start_page_num: {}
+  end_page_num: {}
+  is_draft: {}
+  comments: {}
+  create_date: {}
+  created_at: {}
+  updated_at: {}
+  file_catg: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  filing_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  data_store_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

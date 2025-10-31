@@ -1,0 +1,30 @@
+# Reference this view as custom_company_groups
+schema: public
+
+dimensions:
+  group_name: {}
+  is_private: {}
+  state_tags: {}
+  tax_code_tags: {}
+  tax_type_tags: {}
+  custom_tags: {}
+  status: {}
+  status_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  assigned_user_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

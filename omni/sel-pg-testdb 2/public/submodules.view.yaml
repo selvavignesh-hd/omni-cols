@@ -1,0 +1,26 @@
+# Reference this view as submodules
+schema: public
+
+dimensions:
+  submodule_code: {}
+  submodule_name: {}
+  submodule_desc: {}
+  is_domain_based: {}
+  sortorder: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  module_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

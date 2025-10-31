@@ -1,0 +1,45 @@
+# Reference this view as workflow_messages
+schema: public
+
+dimensions:
+  ref_cd: {}
+  message: {}
+  message_status: {}
+  import_tax_code: {}
+  tax_code: {}
+  filed_by: {}
+  message_param1: {}
+  message_param2: {}
+  message_param3: {}
+  message_param4: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  test: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  workflow_id:
+    format: ID
+
+  ref_id:
+    format: ID
+
+  workflow_message_code_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+  payroll_employee_id:
+    format: ID
+
+  transmission_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

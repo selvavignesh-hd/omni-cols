@@ -1,0 +1,26 @@
+# Reference this view as company_cid_history
+schema: public
+
+dimensions:
+  is_primary: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

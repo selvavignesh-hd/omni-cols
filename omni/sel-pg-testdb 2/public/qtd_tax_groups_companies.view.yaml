@@ -1,0 +1,23 @@
+# Reference this view as qtd_tax_groups_companies
+schema: public
+
+dimensions:
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  qtd_tax_group_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

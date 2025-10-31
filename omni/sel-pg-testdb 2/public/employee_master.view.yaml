@@ -1,0 +1,57 @@
+# Reference this view as employee_master
+schema: public
+
+dimensions:
+  first_name: {}
+  middle_name: {}
+  last_name: {}
+  gender: {}
+  dob: {}
+  ssn: {}
+  soc_code: {}
+  pay_cycle: {}
+  hire_date: {}
+  terminate_date: {}
+  home_address: {}
+  home_address2: {}
+  home_city: {}
+  home_state: {}
+  home_postal_code: {}
+  home_country_code: {}
+  primary_psd: {}
+  workers_comp_class_code: {}
+  driver_license_num: {}
+  state_occup_code1: {}
+  state_occup_code2: {}
+  version: {}
+  override_reason: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  status: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  transmission_id:
+    format: ID
+
+  company_master_id:
+    format: ID
+
+  payroll_employee_id:
+    format: ID
+
+  payroll_employee_assigned_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

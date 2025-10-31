@@ -1,0 +1,42 @@
+# Reference this view as r_and_d_tax_credit_part1s
+schema: public
+
+dimensions:
+  qtr_code: {}
+  amend_num: {}
+  filed_by: {}
+  fein: {}
+  source: {}
+  tax_return_end_date: {}
+  tax_return_type: {}
+  tax_return_filing_date: {}
+  fein_used_on_form6765: {}
+  tax_return_credit_amount: {}
+  credit_amount_taken_in_previous_periods: {}
+  credit_amount_taken_in_current_periods: {}
+  credit_remaining_amount: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  status: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  external_filing_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+  filing_company_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

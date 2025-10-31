@@ -1,0 +1,28 @@
+# Reference this view as generated_reports
+schema: public
+
+dimensions:
+  ref_code: {}
+  report_name: {}
+  search_pref: {}
+  xls_file_name: {}
+  csv_file_name: {}
+  pdf_file_name: {}
+  status: {}
+  created_at: {}
+  created_by: {}
+  completed_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  data_store_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

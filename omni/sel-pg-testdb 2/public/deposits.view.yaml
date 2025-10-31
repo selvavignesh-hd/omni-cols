@@ -1,0 +1,94 @@
+# Reference this view as deposits
+schema: public
+
+dimensions:
+  bank_cd: {}
+  filed_by: {}
+  ein: {}
+  orig_pmt_freq: {}
+  new_pmt_freq: {}
+  payment_due_date: {}
+  expected_payment_due_date: {}
+  deposit_date: {}
+  deposit_create_date: {}
+  process_due_date: {}
+  payroll_start_date: {}
+  payroll_end_date: {}
+  qtr_code: {}
+  status: {}
+  trans_type: {}
+  deposit_type: {}
+  amend_num: {}
+  include_with_tax_form: {}
+  is_zero_payment: {}
+  internal_confirmation_num: {}
+  external_confirmation_num: {}
+  access_code: {}
+  deposit_amount: {}
+  adjustment_amount: {}
+  subtotal_amount1: {}
+  subtotal_amount2: {}
+  subtotal_amount3: {}
+  subtotal_amount4: {}
+  ach_file_name: {}
+  comments: {}
+  payapi_status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  is_freezed: {}
+  external_filing_confirmation_num: {}
+  is_payment_settled: {}
+  carry_used: {}
+  is_auto_void: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  bank_id:
+    format: ID
+
+  check_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  agency_notice_item_id:
+    format: ID
+
+  adjustment_item_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  select_pmt_option_id:
+    format: ID
+
+  payment_method_id:
+    format: ID
+
+  deposit_submission_id:
+    format: ID
+
+  data_store_id:
+    format: ID
+
+  payapi_id:
+    format: ID
+
+  orig_payment_method_id:
+    format: ID
+
+  void_deposit_submission_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

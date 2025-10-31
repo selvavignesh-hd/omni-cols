@@ -1,0 +1,17 @@
+# Reference this view as company_master_status
+schema: public
+
+dimensions:
+  eff_date: {}
+  expiry_date: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  company_master_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

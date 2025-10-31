@@ -1,0 +1,31 @@
+# Reference this view as domains
+schema: public
+
+dimensions:
+  domain_name: {}
+  domain_desc: {}
+  external_domain_name: {}
+  is_manual: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  external_source_id:
+    format: ID
+
+  external_domain_id:
+    format: ID
+
+  external_alt_domain_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

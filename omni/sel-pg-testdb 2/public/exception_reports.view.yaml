@@ -1,0 +1,31 @@
+# Reference this view as exception_reports
+schema: public
+
+dimensions:
+  check_name: {}
+  status: {}
+  error_file_name: {}
+  tax_code: {}
+  tax_payee_code: {}
+  state: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  workflow_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

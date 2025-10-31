@@ -1,0 +1,36 @@
+# Reference this view as select_form_options
+schema: public
+
+dimensions:
+  filed_by: {}
+  form_type: {}
+  option_code: {}
+  form_access_code: {}
+  form_access_code2: {}
+  form_access_code3: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+  remit_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

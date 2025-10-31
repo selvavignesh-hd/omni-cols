@@ -1,0 +1,29 @@
+# Reference this view as payroll_xfer_tax_groups
+schema: public
+
+dimensions:
+  qtr_code: {}
+  state: {}
+  is_imported: {}
+  is_interim: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  payroll_xfer_id:
+    format: ID
+
+  tax_group_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

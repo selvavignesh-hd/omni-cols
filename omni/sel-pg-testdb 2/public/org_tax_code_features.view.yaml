@@ -1,0 +1,27 @@
+# Reference this view as org_tax_code_features
+schema: public
+
+dimensions:
+  filed_by: {}
+  use_prior_4_wages_n_tax: {}
+  use_prior_4_wage_capping: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,64 @@
+# Reference this view as nys_45_history
+schema: public
+
+dimensions:
+  amend_num: {}
+  qtr_code: {}
+  filed_by: {}
+  total_gross_wages: {}
+  total_taxable_wages: {}
+  remuneration_paid_this_quarter_in_access: {}
+  ui_contribution_rate: {}
+  ui_contribution_due: {}
+  re_employment_service_fund: {}
+  ui_previously_underpaid: {}
+  line_7: {}
+  ui_previously_overpaid: {}
+  total_ui_amounts_due: {}
+  total_ui_overpaid: {}
+  deposits_tax_codes_459: {}
+  ny_state_tax: {}
+  ny_city1: {}
+  ny_city2: {}
+  total_tax_wth: {}
+  wt_credit_previous_qtr: {}
+  total_payments_made_this_qtr: {}
+  total_payments: {}
+  total_wt_amount_due: {}
+  total_wt_overpaid: {}
+  total_payment_due: {}
+  outstanding_liabilities_refund: {}
+  employees_count_month1: {}
+  employees_count_month2: {}
+  employees_count_month3: {}
+  created_at: {}
+  updated_at: {}
+  created_by: {}
+  updated_by: {}
+  line_18: {}
+  line_19: {}
+  wt_payment_made_previously_filed_form: {}
+  overpayment_previously_filed_form: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  filing_group_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+  partition_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

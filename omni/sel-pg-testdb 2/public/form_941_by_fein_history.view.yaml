@@ -1,0 +1,49 @@
+# Reference this view as form_941_by_fein_history
+schema: public
+
+dimensions:
+  fein: {}
+  deposit_schedule_type: {}
+  cpeo_type: {}
+  num_of_employees: {}
+  taxable_wages: {}
+  withheld_tax: {}
+  is_ss_medicare_exempt: {}
+  ss_wages: {}
+  ss_tax: {}
+  ss_tips_wages: {}
+  ss_tips_tax: {}
+  medicare_wages: {}
+  medicare_tax: {}
+  additional_medicare_wages: {}
+  additional_medicare_tax: {}
+  total_ss_medicare_tax: {}
+  section_3121_demand_tax: {}
+  total_unadjusted_tax: {}
+  fractions_of_cents: {}
+  sick_pay_adjustment_tax: {}
+  group_life_adjustment_tax: {}
+  total_federal_tax: {}
+  small_business_tax_credit: {}
+  total_federal_tax_after_tax_credit: {}
+  total_deposits: {}
+  balance_due: {}
+  overpayment: {}
+  is_final_return: {}
+  final_date: {}
+  is_seasonal: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  form_941_by_fein_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

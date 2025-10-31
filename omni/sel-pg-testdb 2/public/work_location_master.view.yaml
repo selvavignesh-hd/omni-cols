@@ -1,0 +1,34 @@
+# Reference this view as work_location_master
+schema: public
+
+dimensions:
+  work_location_name: {}
+  work_location_type: {}
+  work_address: {}
+  work_address2: {}
+  work_city: {}
+  work_state: {}
+  work_postal_code: {}
+  work_country_code: {}
+  naics_code: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  work_location_id:
+    format: ID
+
+  state_location_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

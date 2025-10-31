@@ -1,0 +1,19 @@
+# Reference this view as soc
+schema: public
+
+dimensions:
+  code: {}
+  name: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

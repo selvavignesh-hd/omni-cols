@@ -1,0 +1,61 @@
+# Reference this view as org_system_config
+schema: public
+
+dimensions:
+  states: {}
+  soc_states: {}
+  signature_file_dir: {}
+  agency_upload_dir: {}
+  filing_efile_dir: {}
+  filing_pdf_dir: {}
+  filing_xlsx_dir: {}
+  nacha_file_dir: {}
+  check_pdf_dir: {}
+  reports_file_dir: {}
+  ein_file_dir: {}
+  rate_process_file_dir: {}
+  positive_pay_file_dir: {}
+  bulk_import_file_dir: {}
+  doc_upload_dir: {}
+  logo_file_dir: {}
+  enrollment_file_dir: {}
+  ack_file_dir: {}
+  batch_notification_emails: {}
+  is_redis_refresh: {}
+  expire_workflow_progress_after: {}
+  update_workflow_log_after: {}
+  num_of_comps_per_qtd: {}
+  max_num_of_errors: {}
+  file_import_type: {}
+  ach_generator: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  filing_confirmations_dir: {}
+  timezone_cd: {}
+  ach_parser_dir: {}
+  ach_bai2_dir: {}
+  payment_voucher_dir: {}
+  integrity_checks_dir: {}
+  dtd_import_comparison_dir: {}
+  rnd_tax_credit_dir: {}
+  exception_report_dir: {}
+  is_comp_or_org_check: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  check_transmission_id:
+    format: ID
+
+  data_store_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,20 @@
+# Reference this view as data_stores
+schema: public
+
+dimensions:
+  storage_type: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  is_active: {}
+  is_deleted: {}
+  data_store_name: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,36 @@
+# Reference this view as adjustments
+schema: public
+
+dimensions:
+  filed_by: {}
+  qtr_code: {}
+  adjustment_date: {}
+  comments: {}
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+  payment_method_id:
+    format: ID
+
+  bank_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

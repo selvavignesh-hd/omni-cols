@@ -1,0 +1,25 @@
+# Reference this view as modules
+schema: public
+
+dimensions:
+  module_code: {}
+  module_name: {}
+  module_desc: {}
+  sortorder: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  application_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

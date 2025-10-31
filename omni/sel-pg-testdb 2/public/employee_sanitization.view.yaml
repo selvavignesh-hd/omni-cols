@@ -1,0 +1,23 @@
+# Reference this view as employee_sanitization
+schema: public
+
+dimensions:
+  first_name: {}
+  middle_name: {}
+  last_name: {}
+  ssn: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  employee_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

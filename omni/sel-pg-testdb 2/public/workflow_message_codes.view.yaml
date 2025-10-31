@@ -1,0 +1,27 @@
+# Reference this view as workflow_message_codes
+schema: public
+
+dimensions:
+  message_catg: {}
+  message_code: {}
+  message_type: {}
+  is_auto_cleared: {}
+  message: {}
+  old_message_code: {}
+  dtd_qtd_flag: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  is_filing_error_for_preview: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

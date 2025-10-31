@@ -1,0 +1,34 @@
+# Reference this view as org_tax_payee_override_features
+schema: public
+
+dimensions:
+  is_auto_check_debit_missing_ein: {}
+  is_auto_check_debit_missing_access_code: {}
+  is_auto_check_debit_missing_payee_ach_info: {}
+  is_auto_check_debit_pdf_filing_method: {}
+  is_auto_check_debit_not_enrolled: {}
+  is_debit_not_allowed: {}
+  fraction_of_cents_threshold: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  tax_payment_method_option_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

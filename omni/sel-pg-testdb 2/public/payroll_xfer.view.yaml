@@ -1,0 +1,52 @@
+# Reference this view as payroll_xfer
+schema: public
+
+dimensions:
+  qtr_code: {}
+  file_seq_num: {}
+  file_type: {}
+  cid_range: {}
+  max_cid: {}
+  states: {}
+  receive_time: {}
+  process_time: {}
+  orig_file_name: {}
+  file_name: {}
+  file_version: {}
+  num_records: {}
+  tax_groups_metadata: {}
+  work_engine_cd: {}
+  selected_records: {}
+  inserted_records: {}
+  system_errors: {}
+  data_errors: {}
+  is_interim: {}
+  status: {}
+  comment: {}
+  relationship_code: {}
+  skip_lines: {}
+  created_at: {}
+  updated_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  source_file_dir_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+  workflow_id:
+    format: ID
+
+  qtd_file_group_id:
+    format: ID
+
+  data_store_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

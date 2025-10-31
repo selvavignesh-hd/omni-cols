@@ -1,0 +1,28 @@
+# Reference this view as bulk_imports
+schema: public
+
+dimensions:
+  type: {}
+  import_file_name: {}
+  summary_file_name: {}
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  exec_type: {}
+  ignore_file_name: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  workflow_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

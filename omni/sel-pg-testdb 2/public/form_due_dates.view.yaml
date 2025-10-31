@@ -1,0 +1,29 @@
+# Reference this view as form_due_dates
+schema: public
+
+dimensions:
+  date_type_code: {}
+  filing_freq_code: {}
+  due_date_basis_code: {}
+  unit_of_offset: {}
+  offset_value: {}
+  extra_days_for_non_working_day: {}
+  holiday_calendar_code: {}
+  is_default: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  tax_form_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

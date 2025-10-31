@@ -1,0 +1,55 @@
+# Reference this view as filing_groups
+schema: public
+
+dimensions:
+  filed_by: {}
+  option_code: {}
+  is_zero_tax_filing: {}
+  is_pdf_copy: {}
+  status: {}
+  payment_status: {}
+  ssn_option: {}
+  amendment_num: {}
+  is_amendment_req: {}
+  amend_mask: {}
+  is_final_return: {}
+  filing_due_date: {}
+  period_type: {}
+  period_code: {}
+  form_create_date: {}
+  submit_date: {}
+  confirm_date: {}
+  close_date: {}
+  void_date: {}
+  confirmation_num: {}
+  confirm_tax: {}
+  form_details: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  filing_confirm_num: {}
+  error_msg: {}
+  deposit_ref_num: {}
+  workflow_status: {}
+  is_freezed: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  partition_id:
+    format: ID
+
+  tax_group_id:
+    format: ID
+
+  tax_form_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

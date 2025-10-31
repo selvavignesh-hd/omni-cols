@@ -1,0 +1,31 @@
+# Reference this view as qtd_tax_groups
+schema: public
+
+dimensions:
+  state: {}
+  qtr_code: {}
+  revision_num: {}
+  pending_count: {}
+  closed_count: {}
+  is_interim: {}
+  skip_error: {}
+  status: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  filed_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_group_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

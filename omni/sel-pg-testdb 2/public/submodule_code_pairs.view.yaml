@@ -1,0 +1,22 @@
+# Reference this view as submodule_code_pairs
+schema: public
+
+dimensions:
+  code: {}
+  submodule_code: {}
+  data_type: {}
+  code_values: {}
+  display_name: {}
+  comment: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

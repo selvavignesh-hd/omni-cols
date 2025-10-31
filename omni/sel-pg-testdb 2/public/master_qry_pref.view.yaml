@@ -1,0 +1,24 @@
+# Reference this view as master_qry_pref
+schema: public
+
+dimensions:
+  view_name: {}
+  qry_list: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  submodule_id:
+    format: ID
+
+  user_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

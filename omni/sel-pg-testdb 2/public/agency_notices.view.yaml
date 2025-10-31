@@ -1,0 +1,41 @@
+# Reference this view as agency_notices
+schema: public
+
+dimensions:
+  notice_date: {}
+  receive_date: {}
+  due_date: {}
+  schedule_date: {}
+  period_end_date: {}
+  pay_liability_from: {}
+  filed_by: {}
+  comments: {}
+  status: {}
+  dated: {}
+  replaced_by: {}
+  attachment_file_name: {}
+  actual_attachment_file_name: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_payee_id:
+    format: ID
+
+  payment_method_id:
+    format: ID
+
+  payroll_company_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

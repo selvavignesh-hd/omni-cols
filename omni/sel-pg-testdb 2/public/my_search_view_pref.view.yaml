@@ -1,0 +1,23 @@
+# Reference this view as my_search_view_pref
+schema: public
+
+dimensions:
+  view_name: {}
+  collist: {}
+  is_default: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  ref_cd: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  user_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,29 @@
+# Reference this view as email_variables
+schema: public
+
+dimensions:
+  email_variable: {}
+  description: {}
+  mapped_field: {}
+  is_required: {}
+  sample_text: {}
+  default_value: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  unit_of_meas_id:
+    format: ID
+
+  format_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

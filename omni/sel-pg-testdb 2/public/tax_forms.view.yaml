@@ -1,0 +1,71 @@
+# Reference this view as tax_forms
+schema: public
+
+dimensions:
+  tax_form_code: {}
+  tax_form_name: {}
+  form_type_code: {}
+  is_ssn: {}
+  tax_state: {}
+  filed_by: {}
+  paper_fileable: {}
+  is_signature_required: {}
+  is_amendment: {}
+  must_file_to_close_period: {}
+  is_bulk_filing: {}
+  is_company_groups: {}
+  default_regular_wth_overpayment_option: {}
+  default_amendment_wth_overpayment_option: {}
+  regular_wth_credit_carry_allowed: {}
+  amendment_wth_credit_carry_allowed: {}
+  regular_wth_refund_allowed: {}
+  amendment_wth_refund_allowed: {}
+  default_regular_sui_overpayment_option: {}
+  default_amendment_sui_overpayment_option: {}
+  regular_sui_credit_carry_allowed: {}
+  amendment_sui_credit_carry_allowed: {}
+  regular_sui_refund_allowed: {}
+  amendment_sui_refund_allowed: {}
+  default_regular_local_overpayment_option: {}
+  default_amendment_local_overpayment_option: {}
+  regular_local_credit_carry_allowed: {}
+  amendment_local_credit_carry_allowed: {}
+  regular_local_refund_allowed: {}
+  amendment_local_refund_allowed: {}
+  filing_freq_code: {}
+  holiday_calendar_code: {}
+  company_group_rule: {}
+  company_group_rule_value: {}
+  company_group_avg_rule_value: {}
+  remit_id_desc: {}
+  is_access_code1: {}
+  access_code1_desc: {}
+  is_access_code2: {}
+  access_code2_desc: {}
+  is_access_code3: {}
+  access_code3_desc: {}
+  is_tpa_required: {}
+  is_auto_form_rule_4_missing_remit: {}
+  is_auto_form_rule_4_missing_ein: {}
+  is_auto_form_rule_4_missing_tpa: {}
+  is_auto_form_rule_4_missing_enroll: {}
+  is_auto_form_rule_4_missing_access_code: {}
+  is_check_payment_4_pdf_return: {}
+  is_4th_qtr_overpayment_must_refund: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  is_remit_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

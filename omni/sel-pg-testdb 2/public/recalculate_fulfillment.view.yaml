@@ -1,0 +1,30 @@
+# Reference this view as recalculate_fulfillment
+schema: public
+
+dimensions:
+  filed_by: {}
+  qtr_code: {}
+  status: {}
+  prev_value: {}
+  new_value: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+  filed_by_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

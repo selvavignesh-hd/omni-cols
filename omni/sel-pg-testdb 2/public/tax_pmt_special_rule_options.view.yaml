@@ -1,0 +1,21 @@
+# Reference this view as tax_pmt_special_rule_options
+schema: public
+
+dimensions:
+  special_rule_code: {}
+  year: {}
+  qtr_num: {}
+  rule: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,23 @@
+# Reference this view as employee_taxable_wages
+schema: public
+
+dimensions:
+  year: {}
+  ssn: {}
+  tax_type: {}
+  tax_state: {}
+  tax_code: {}
+  ytd_taxable_wages: {}
+  created_at: {}
+  updated_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,24 @@
+# Reference this view as submodule_extra
+schema: public
+
+dimensions:
+  ref_code: {}
+  value: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  ref_id:
+    format: ID
+
+  submodule_code_pairs_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

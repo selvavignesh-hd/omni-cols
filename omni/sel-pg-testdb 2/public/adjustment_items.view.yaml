@@ -1,0 +1,27 @@
+# Reference this view as adjustment_items
+schema: public
+
+dimensions:
+  tax: {}
+  interest: {}
+  penalty: {}
+  is_paid: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  adjustment_id:
+    format: ID
+
+  tax_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

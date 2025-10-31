@@ -1,0 +1,25 @@
+# Reference this view as fein_history
+schema: public
+
+dimensions:
+  fein: {}
+  eff_date: {}
+  expiry_date: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  company_master_id:
+    format: ID
+
+  org_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

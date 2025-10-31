@@ -1,0 +1,25 @@
+# Reference this view as postal_codes
+schema: public
+
+dimensions:
+  zipcode: {}
+  city: {}
+  state_code: {}
+  fips_code: {}
+  county: {}
+  area_code: {}
+  preferred: {}
+  zipcode_type: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

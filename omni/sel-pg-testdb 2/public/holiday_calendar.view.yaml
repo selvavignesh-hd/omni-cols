@@ -1,0 +1,24 @@
+# Reference this view as holiday_calendar
+schema: public
+
+dimensions:
+  calendar_code: {}
+  tax_year: {}
+  holiday_date: {}
+  holiday_name: {}
+  dow: {}
+  is_active: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+  tax_state: {}
+  exclude_states_for_holiday: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

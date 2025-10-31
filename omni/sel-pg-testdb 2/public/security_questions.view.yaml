@@ -1,0 +1,22 @@
+# Reference this view as security_questions
+schema: public
+
+dimensions:
+  question: {}
+  is_active: {}
+  is_deleted: {}
+  created_at: {}
+  created_by: {}
+  updated_at: {}
+  updated_by: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  group_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

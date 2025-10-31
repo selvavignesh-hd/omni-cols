@@ -1,0 +1,19 @@
+# Reference this view as login_log
+schema: public
+
+dimensions:
+  user_name: {}
+  token: {}
+  ip: {}
+  login_time: {}
+  logoff_time: {}
+  created_at: {}
+  updated_at: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count
