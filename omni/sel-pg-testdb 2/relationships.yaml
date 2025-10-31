@@ -1,3 +1,9 @@
+- join_from_view: company_master
+  join_to_view: organizations
+  join_type: always_left
+  on_sql: ${company_master.org_id} = ${organizations.id}
+  reversible: false
+
 - join_from_view: adjustment_items
   join_to_view: adjustments
   join_type: always_left
